@@ -6,9 +6,9 @@ const app = express();
 
 // Serve only the static files form the dist directory
 // app.use(express.static('./dist'));
-// app.use(express.static(__dirname + '/dist/list-app'));
+app.use(express.static(__dirname + '/src/list-app'));
 
-app.use(path.join(__dirname, "path/to/index"));
+// app.use(path.join(__dirname, "/src/index.html"));
 
 
 
@@ -17,7 +17,7 @@ app.use(path.join(__dirname, "path/to/index"));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/index.html'));
+res.sendFile(path.join(__dirname+'/src/index.html'));
 });
 
 
