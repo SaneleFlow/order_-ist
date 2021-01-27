@@ -1,0 +1,56 @@
+
+ <form  #form="ngForm" (ngSubmit)="editOrder()">
+
+<div  *ngFor = "let column of orderDetails; index as i">
+    <!-- <label>Order ID</label><br> -->
+<!-- <input name="order_id"  [(ngModel)]="order_id"  value="{{column.id}}">{{column.id}}
+<br><br> -->
+
+
+<label>Order Date</label><br>
+<input name="order_date" [(ngModel)]="order_date"    placeholder="{{column.order_date}}"/>
+<br><br>
+
+
+<label>Customer</label><br>
+<input  name="customer" [(ngModel)]="customer"  placeholder="{{column.customer}}"/>
+<br><br>
+
+
+<label>Status</label><br>
+
+
+
+
+<select  name="status" [(ngModel)]="status" >
+    <option value="Order placed">Order placed</option>
+    <option value="Delivered">Delivered</option>
+    <option value="Closed">Closed</option>
+
+  </select>
+<br><br>
+
+
+
+<label>Product Name</label><br>
+<input name="product_name" [(ngModel)]="product_name"  placeholder="{{column.product_name}}"/>
+
+<br><br>
+
+<label>Cost</label><br>
+<input name="cost" [(ngModel)]="cost"  placeholder="{{column.cost}}"/>
+
+<br><br>
+
+<label>Quantity</label><br>
+<input name="quantity" [(ngModel)]="quantity"  placeholder="{{column.quantity}}"/>
+
+<br><br>
+
+<button type="submit" class="button button3" >Submit</button>
+</div>
+
+
+
+
+</form>

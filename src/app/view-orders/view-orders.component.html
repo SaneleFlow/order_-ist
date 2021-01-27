@@ -1,0 +1,32 @@
+
+<div  *ngFor = "let column of orderDetails; index as i">
+    <label>Order ID</label>
+<p>{{ column.id }}</p>
+<br>
+<label>Order Date</label>
+<p>{{ column.order_date }}</p>
+<br>
+<label>Customer</label>
+
+<p>{{ column.customer }}</p>
+<br>
+<label>Status</label>
+
+<p>{{ column.status}}</p>
+<br>
+<label>Product Name</label>
+
+<p>{{ column.product_name}}</p>
+
+<br>
+<label>Cost</label>
+
+<p>{{ column.cost}}</p>
+
+<br>
+<label>Quantity</label>
+
+<p>{{ column.quantity}}</p>
+</div>
+
+
