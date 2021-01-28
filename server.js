@@ -1,14 +1,15 @@
 const express = require('express');
+const path = require('path')
 
 
 const app = express();
 
 
-app.use(express.static(`./src/`));
+app.use(express.static(_dirname +'/dist/list-app'));
 
 
 app.get('/*', function (req, res) {
-  res.sendFile('index.html', { root: 'src/list-app' }
+  res.sendFile(path.join(_dirname +  'dist/list-app/index.html' )
   );
 });
 
