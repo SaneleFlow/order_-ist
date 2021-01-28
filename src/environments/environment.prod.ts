@@ -1,3 +1,9 @@
 export const environment = {
-  production: true
+  production: true,
+
+  api: 'https://orderlist-angular.herokuapp.com/',
+
+redirectUrl: 'https://orderlist-angular.herokuapp.com/implicit/callback'
+
+
 };
