@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class UserService {
 
-  apiUrl = 'https://order-console.herokuapp.com/';   
+  apiUrl = 'https://order-console.herokuapp.com/api/';   
   
   // apiUrl= 'http://orders.test/api/';   
 
