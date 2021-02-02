@@ -4,11 +4,11 @@ const cors = require('cors');
 
 
 
-// const app = express();
+const app = express();
 app.options('*', cors()) 
 
  
-app.use(cors())
+// app.use(cors())
 
 
 app.use(express.static(__dirname+'/dist/list-app'));
