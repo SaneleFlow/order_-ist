@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
 // import { AppRoutingModule } from './app-routing.module';
 import { StorageMap } from '@ngx-pwa/local-storage';
@@ -15,6 +16,12 @@ import { EditOrderComponent } from './edit-order/edit-order.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule } from '@angular/forms';
+// import { AppComponent } from './app.component';
+
+export const routes: Routes = [
+  {path:'', component: AppComponent}
+]
+
 
 @NgModule({
   declarations: [
@@ -24,8 +31,12 @@ import { FormsModule } from '@angular/forms';
     EditOrderComponent
   ],
   imports: [
+    RouterModule.forRoot(routes, {
+      
+      onSameUrlNavigation : 'reload'
+    }),
     BrowserModule,
-    AppRoutingModule,
+    // AppRoutingModule,
     HttpClientModule,
     FormsModule,
     NgbModule
